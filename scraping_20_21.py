@@ -2,8 +2,7 @@ from datetime import date, timedelta
 import pandas as pd
 import requests
 
-from get import get_team_stats_dict, get_match_results
-from basic import stats
+from get import get_team_stats_dict, get_match_results, stats
 
 
 # [{'Sacramento Kings': 'Boston Celtics', 'Charlotte Hornets': 'Philadelphia 76ers'}, ['W', 'L']]
@@ -97,8 +96,8 @@ def main():
     for i in range(attempts):
         try:
             #start day has to be at least three days after the start of the season
-            all_games = training_set(start_year=2020, start_month=12, start_day=27, end_year=2020, end_month=12,
-                                     end_day=28,
+            all_games = training_set(start_year=2020, start_month=12, start_day=25, end_year=2021, end_month=5,
+                                     end_day=16,
                                      season='2020-21', season_start='12/22/2020')
             df = make_dataframe(all_games)
 
