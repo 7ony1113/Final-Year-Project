@@ -7,7 +7,7 @@ from get import get_team_stats_dict, get_match_results, stats
 
 # [{'Sacramento Kings': 'Boston Celtics', 'Charlotte Hornets': 'Philadelphia 76ers'}, ['W', 'L']]
 # team stats is a dataframe
-def to_dataframe(daily_games, start_date, end_date, season):  # , mean_dict, std_dict):
+def to_dataframe(daily_games, start_date, end_date, season): 
     full_dataframe = []
     game_number = 0  # counter to match with the correct game
     daily_results = daily_games[1]  # win or loss for each game

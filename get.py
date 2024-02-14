@@ -55,7 +55,7 @@ stats = {'W_PCT': 'Base',
 
 def get_team_stats_dict(team, start_date, end_date, season='2021-22'):
     """
-    Returns the stats for the specified team in a dataframe, default year is 2020-21
+    Returns the stats for the specified team in a dataframe,
     :param team: Day of games scheduled in form 'mm/dd/yyyy'
     :param season: Day of games scheduled in form 'mm/dd/yyyy'
     :return: A dictionary of game matchups {home_team:[away_team]}
@@ -118,9 +118,9 @@ def get_match_results(date, season):
     """
     Returns the matchup and result of the game
 
-    :param date: Day of games scheduled in form 'mm/dd/yyyy'
-    :param season: Season in form of 'yyyy-yy'
-    :return: [{Boston Celtics: Los Angeles Lakers}], ['W']
+    date: Day of games scheduled in form 'mm/dd/yyyy'
+    season: Season in form of 'yyyy-yy'
+    output: [{Boston Celtics: Los Angeles Lakers}], ['W']
     """
 
     game_log = leaguegamelog.LeagueGameLog(season=season, league_id='00', date_from_nullable=date,
@@ -168,8 +168,8 @@ def get_daily_matches(date):
     """
     This method creates a dictionary of daily game matchups.
 
-    :param date: Day of games scheduled in form 'mm/dd/yyyy'
-    :return: A dictionary of game matchups {home_team:away_team}
+    date: Day of games scheduled in form 'mm/dd/yyyy'
+    output: A dictionary of game matchups {home_team:away_team}
     """
 
     daily_match = scoreboard.Scoreboard(league_id='00', game_date=date, timeout=120)
